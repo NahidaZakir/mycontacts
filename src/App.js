@@ -5,6 +5,7 @@ import Main from './layout/Main';
 import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
 import Home from './components/Home/Home';
+import First from './components/First/First';
 
 function App() {
  const router = createBrowserRouter([
@@ -12,6 +13,10 @@ function App() {
     path:'/',
     element:<Main></Main>,
     children:[
+      {
+        path:'/',
+        element:<First></First>
+      },
       {
         path:'/login',
         element: <Login></Login>
